@@ -82,7 +82,7 @@ const validateToken = async (req, res, next) => {
             return res.status(404).json({ data: 'failed' });
         }
         console.log('success')
-        res.status(200).json({ data: 'mapsdata' });
+        res.status(200).json({ data: 'mapsdata',linkstructure:'' });
     } catch (error) {
         console.log(error);
         return res.status(500).json({ data: 'failed' });

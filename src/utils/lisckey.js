@@ -1,5 +1,5 @@
 const crypto = require('crypto');  // Import the crypto module
-const secretKey = 'your_secret_key';  // Replace this with your actual secret key
+const secretKey = 'f6f83d91b905e4f25d58f7b6fbb4b9f8e3f34516c7d8a33f4a1adfe442cd8edb9e59fe717f64f575160cc0f85b09c84b';  // Replace this with your actual secret key
 
 function generateLicenseKey(machineId) {
   var time = Date.now();  // Current timestamp

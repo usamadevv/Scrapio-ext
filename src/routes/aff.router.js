@@ -10,7 +10,7 @@ affRouter.post('/api/aff/addvisitor',incrementVisitor);
 affRouter.post('/api/validateaff', verifyAffToken,validateaff);
 affRouter.post('/api/aff/getuserinfo', verifyAffToken,getaffinfo);
 
-affRouter.get('/aff/x09',getAllAffs)
+//&affRouter.get('/aff/x09',getAllAffs)
 
 
 
