@@ -10,6 +10,7 @@ const liscRouter = require("./routes/lisc.router");
 
 const affRouter = require("./routes/aff.router");
 const orderRouter = require("./routes/order.router");
+const sendEmail = require("./utils/sendEmail");
 // const planetsRouter = require("./routes/planets/planets.router");
 dbConnect();
 const app = express();

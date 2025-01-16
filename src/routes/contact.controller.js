@@ -1,5 +1,6 @@
 const Contact = require('../models/contact.model');
 const generateLicenseKey = require('../utils/lisckey');
+const sendEmail = require('../utils/sendEmail');
 const createContact= async(req,res,next)=>{
 
     const {name,email,product,message} =  req.body;
@@ -13,6 +14,8 @@ const createContact= async(req,res,next)=>{
 
     try{
         await postingContact.save();
+
+await sendEmail('New Form',JSON.stringify({name,email,product,message}))
 
       return res.status(400).json({message:'success'})
 

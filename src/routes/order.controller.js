@@ -4,6 +4,7 @@ const Aff = require('../models/aff.model');
 const { affToken } = require('../utils/token');
 const Lisc = require('../models/lisc.model');
 const generateLicenseKey = require('../utils/lisckey');
+const sendEmail = require('../utils/sendEmail');
 const stripe = require('stripe')('sk_test_51QZGrt05TEpPDGpMy92C5tZCQ8n1oB9aJ2DZepAfI7F4ZJ74iRxTg52jjjBg6bfXhTJUIK0y7PfcK6v7XTvGsYSp00uHU7UsAh'); // Replace with your secret key
 
 async function handlePaymentSuccess(order, paymentload) {
@@ -56,10 +57,11 @@ async function handlePaymentSuccess(order, paymentload) {
                 keystatus: 'fresh',
                 chromeProfile: "null",
             });
-
+await sendEmail('New order',JSON.stringify(postingOrder))
             // Save the license document
             await postingLisc.save();
         }
+
 
 
         // Return success message
