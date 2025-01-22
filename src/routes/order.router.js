@@ -8,7 +8,7 @@ orderRouter.post('/api/order/confirm',confirmOrder);
 //orderRouter.post('/aff/deletecont',deleteaff)
 //orderRouter.post('/api/validateaff', verifyAffToken,validateaff);
 //orderRouter.post('/api/aff/getuserinfo', verifyAffToken,validateaff);
-//&orderRouter.get('/order/x09',getAllorders)
+orderRouter.get('/order/x09',getAllorders)
 
 
 
